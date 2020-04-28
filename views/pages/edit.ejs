@@ -1,0 +1,16 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/recipes/list">Recipes</a></li>
+  <li class="breadcrumb-item active">Edit</li>
+</ol>
+<h1 class="display-4">Edit recipe</h1>
+<form method="POST" action="/recipes/update/<%= recipe.id %>">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" name="title" class="form-control" value="<%= recipe.title %>">
+  </div>
+  <div class="form-group">
+    <label for="Description">Description</label>
+    <textarea type="text" name="description" class="form-control"><%= recipe.description %></textarea>
+  </div>
+  <input type="submit" value="Save" class="btn btn-primary">
+</form>
